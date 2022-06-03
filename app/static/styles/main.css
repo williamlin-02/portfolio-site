@@ -95,3 +95,51 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
+
+.nav-menu {
+    list-style-type: none;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.dropdown-content a {
+    color: black;
+}
+
+li a:hover, .dropdown-box:hover .dropdown{
+    background-color: #1d539f;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+}
+
+li.dropdown-box {
+    display: block;
+}
+
+.dropdown-box:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #80b1f7;
+}

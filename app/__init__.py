@@ -24,3 +24,8 @@ def jacky():
 @app.route('/william')
 def william():
     return render_template('william.html', title="William", url=os.getenv("URL"))
+
+# for map page
+@app.route('/map')
+def map():
+    return render_template('map.html', title="Map", url=os.getenv("URL"))
