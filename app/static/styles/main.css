@@ -95,3 +95,10 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
+
+#map {
+    display: block;
+    margin: auto;
+    height: 640px;
+    width: 1000px;
+}
