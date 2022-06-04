@@ -43,6 +43,19 @@ def work_edu(name):
     profile_desc = description[name]
     return render_template("work_edu.html", education=profile_edu, description=profile_desc, title=profile_title, url=os.getenv("URL"))
 
+# for work experience/education page
+@app.route('/hobbies/<name>')
+def hobbies(name):
+    profile_title = name.capitalize()
+    hobbies = {
+        "amber": ["hobbies"],
+        "jacky": ["hobbies"],
+        "william": ["dance, volleyball, gaming, tv series"]
+    }
+    profile_hobby = hobbies[name]
+    return render_template("hobbies.html", hobbies=profile_hobby, title=profile_title, url=os.getenv("URL"))
+
+
 # for map page
 @app.route('/map')
 def map():
