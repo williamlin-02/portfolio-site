@@ -1,43 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <title>{{ title }}</title>
-</head>
-
-
-
-<body>
-    <div class="name">
-        <div id="amber-picture" class="amber-picture">
-            <img src="./static/img/amber_photo.jpg" width="200">
-        </div>
-        <h1>Amber Xue</h1>
+{% block body %}
+<div class="name">
+    <div id="amber-picture" class="amber-picture">
+        <img src="./static/img/amber_photo.jpg" width="200">
     </div>
+    <h1>Amber Xue</h1>
+</div>
 
-    <div class="about-me">
-        <p style="width: 500px;">
-            I'm currently pursuing a Computer Science 
-            Master's degree at UPenn. Thriving in the wine industry and 
-            product marketing-related jobs for three years, I'm passionately 
-            seeking to make an impact on the traditional production 
-            industry with advanced computer technology as well as my 
-            programming skills and product insights.</p>
-    </div>
-    
-</body>
-</html>
+<div class="about-me">
+    <p style="width: 500px;">
+        I'm currently pursuing a Computer Science 
+        Master's degree at UPenn. Thriving in the wine industry and 
+        product marketing-related jobs for three years, I'm passionately 
+        seeking to make an impact on the traditional production 
+        industry with advanced computer technology as well as my 
+        programming skills and product insights.</p>
+</div>
+{% endblock %}
