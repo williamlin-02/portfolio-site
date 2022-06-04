@@ -31,12 +31,12 @@ def work_edu(name):
     profile_title = name.capitalize()
     education = {
         "amber": ["edu"],
-        "jacky": ["Northwest High School", "University of Kansas"],
+        "jacky": ["University of Kansas", "Northwest High School"],
         "william": ["edu"]
     }
     description = {
         "amber" : ["edu"],
-        "jacky" : ["High School\nAug 2016 - May 2020", "B.S. Computer Science\nAug 2020 - May 2024"],
+        "jacky" : ["B.S. Computer Science\nAug 2020 - May 2024", "High School\nAug 2016 - May 2020"],
         "william" : ["edu"]
     }
     profile_edu = education[name]
