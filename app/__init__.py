@@ -25,6 +25,12 @@ def jacky():
 def william():
     return render_template('william.html', title="William", url=os.getenv("URL"))
 
+# for work experience/education page
+@app.route('/work_edu/<name>')
+def work_edu(name):
+    profile_title = name.capitalize()
+    return render_template("work_edu.html", name=name, title=profile_title, url=os.getenv("URL"))
+
 # for map page
 @app.route('/map')
 def map():
