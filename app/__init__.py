@@ -25,6 +25,24 @@ def jacky():
 def william():
     return render_template('william.html', title="William", url=os.getenv("URL"))
 
+# for work experience/education page
+@app.route('/work_edu/<name>')
+def work_edu(name):
+    profile_title = name.capitalize()
+    education = {
+        "amber": ["edu"],
+        "jacky": ["Northwest High School", "University of Kansas"],
+        "william": ["edu"]
+    }
+    description = {
+        "amber" : ["edu"],
+        "jacky" : ["High School\nAug 2016 - May 2020", "B.S. Computer Science\nAug 2020 - May 2024"],
+        "william" : ["edu"]
+    }
+    profile_edu = education[name]
+    profile_desc = description[name]
+    return render_template("work_edu.html", education=profile_edu, description=profile_desc, title=profile_title, url=os.getenv("URL"))
+
 # for map page
 @app.route('/map')
 def map():
