@@ -37,9 +37,9 @@ def work_edu(name):
     # key: name
     # value: 2d list with inner generating new lines
     description = {
-        "amber" : ["edu"],
+        "amber" : [["edu"]],
         "jacky" : [["B.S. Computer Science","Aug 2020 - May 2024"], ["High School", "Aug 2016 - May 2020"]],
-        "william" : ["edu"]
+        "william" : [["edu"]]
     }
     profile_edu = education[name]
     profile_desc = description[name]
