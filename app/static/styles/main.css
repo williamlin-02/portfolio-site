@@ -96,6 +96,13 @@ body {
     font-weight: 700;
 }
 
+#map {
+    display: block;
+    margin: auto;
+    height: 600px;
+    width: 1000px;
+}
+
 .nav-menu {
     list-style-type: none;
     height: 45px;
