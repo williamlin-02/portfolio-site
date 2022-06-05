@@ -28,30 +28,21 @@
             </div>
             
             <ul class="nav-menu">
-                <li class="dropdown-box">
-                    <a class="dropdown" href="#">AMBER</a>
-                    <div class="dropdown-content">
-                        <a href={{ url_for( "amber" ) }}>About Me</a>
-                        <a href={{ url_for( "work_edu", name="amber" ) }}>Work Experience/Education</a>
-                        <a href={{ url_for( "hobbies", name="amber" ) }}>Hobbies</a>
-                    </div>
-                </li>
-                <li class="dropdown-box">
-                    <a class="dropdown" href="#">JACKY</a>
-                    <div class="dropdown-content">
-                        <a href={{ url_for( "jacky" ) }}>About Me</a>
-                        <a href={{ url_for( "work_edu", name="jacky" ) }}>Work Experience/Education</a>
-                        <a href={{ url_for( "hobbies", name="jacky" ) }}>Hobbies</a>
-                    </div>
-                </li>
-                <li class="dropdown-box">
-                    <a class="dropdown" href="#">WILLIAM</a>
-                    <div class="dropdown-content">
-                        <a href={{ url_for( "william" ) }}>About Me</a>
-                        <a href={{ url_for( "work_edu", name="william" ) }}>Work Experience/Education</a>
-                        <a href={{ url_for( "hobbies", name="william" ) }}>Hobbies</a>
-                    </div>
-                </li>
+                {% for i in range(nav.people|length) -%}
+                    <li class="dropdown-box">
+                        <a class="dropdown" href="#">{{nav.people[i]|upper}}</a>
+                        <div class="dropdown-content">
+                            {% for j in range(nav.url|length) -%}
+                                {% if j == 0 %}
+                                    <a href={{ url_for( nav.people[i] ) }}>{{nav.label[j]}}</a>
+                                {% else %}
+                                    <a href={{ url_for( nav.url[j], name=nav.people[i] ) }}>{{nav.label[j]}}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </li>
+                    <br>
+                {% endfor %}
                 <li><a href={{ url_for( "map" ) }}>MAP</a></li>
             </ul>
             
