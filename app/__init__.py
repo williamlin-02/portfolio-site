@@ -71,7 +71,7 @@ def hobbies(name):
     }
     profile_hobby = hobbies[name]
     photos = {
-        "amber": "pic",
+        "amber": "amber_hobby.jpg",
         "jacky": "pic",
         "william": "william_hobby.jpg"
     }
