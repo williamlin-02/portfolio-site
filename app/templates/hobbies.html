@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
+
 {% block body %}
+
+    <div class="name">
+        <div id={{mypic}} class={{mypic}} style = "display: flex; justify-content: center;">
+            <img src="/static/img/{{photo}}" width="500" alt = "picture of hobby">
+        </div>
+    </div>
+
     {% for i in range(hobbies|length) %}
         <h2 class="hobby-header"> I enjoy: </h2>
         <p class="hobby-content">{{ hobbies[i] }}</p>
