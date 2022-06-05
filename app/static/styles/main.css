@@ -3,7 +3,7 @@ p, h1, h2, h3, h4, h5, h6, button {
 }
 
 body {
-    background-color: #f5f5f9;
+    background-color: #e4efff;
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
@@ -149,4 +149,43 @@ li.dropdown-box {
 
 .dropdown-content a:hover {
     background-color: #80b1f7;
+}
+
+#work-edu-site {
+    text-align: center;
+}
+
+.work-edu-container {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* the profile photo */
+.name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+.section-header {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hobby-header {
+    text-align: center;
+}
+
+.hobby-content {
+    text-align: center;
 }
