@@ -32,26 +32,26 @@ def work_edu(name):
     job = {
         "amber": ["Black Stallion Winery"],
         "jacky": ["Wendy's"],
-        "william": ["job"]
+        "william": ["U.S. Census Bureau"]
     }
     # key: name
     # value: 2d list with inner generating new lines
     job_description = {
         "amber": [["July 2019 - June 2020"]],
         "jacky": [["October 2019 - March 2020"]],
-        "william": [["job"]]
+        "william": [["August 2020 - November 2020"]]
     }
     education = {
         "amber": ["University of Pennsylvania", "University of California, Davis"],
         "jacky": ["University of Kansas", "Northwest High School"],
-        "william": ["edu"]
+        "william": ["University of Chicago", "Stuyvesant High School"]
     }
     # key: name
     # value: 2d list with inner generating new lines
     edu_description = {
         "amber": [["M.S Computer and Information Technology","Aug 2021 - May 2023"], ["Viticulture and Enology","Sep 2015 - Jun 2018"]],
         "jacky": [["B.S. Computer Science","Aug 2020 - May 2024"], ["High School", "Aug 2016 - May 2020"]],
-        "william": [["edu"]]
+        "william": [["B.S. Computer Science, Minor in Philosophy", "Sept 2020 - June 2024"], ["High School", "Sept 2016 - June 2020"]]
     }
     profile_edu = education[name]
     profile_edu_desc = edu_description[name]
