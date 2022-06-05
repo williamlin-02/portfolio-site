@@ -150,3 +150,9 @@ li.dropdown-box {
 .dropdown-content a:hover {
     background-color: #80b1f7;
 }
+
+.work-edu-container {
+    width:50%;
+    text-align:center;
+    float:left;
+}

@@ -1,9 +1,20 @@
 {% extends "base.html" %}
 
 {% block body %}
-    {% for i in range(education|length) -%}
-        <p>{{ education[i] }}</p>
-        <p>{{ description[i] }}</p>
-    {% endfor %}
+    <div class="work-edu-container">
+        <h1>Work Experience</h1>
+    </div>
 
+    <div class="work-edu-container">
+        <h1>Education</h1>
+        {% for i in range(education|length) -%}
+            <h4>{{ education[i] }}</h4>
+            <p>
+                {% for desc in description[i] -%}
+                    {{ desc }} <br>
+                {% endfor %}
+            </p>
+            <br>
+        {% endfor %}
+    </div>
 {% endblock %}
