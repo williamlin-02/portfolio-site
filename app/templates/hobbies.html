@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+{% block javascript %}
+
+<script src="{{ url_for('static', filename='javascript/w_hobbies.js') }}"></script>
+
+{% endblock javascript %}
+
+
 {% block body %}
     {% for i in range(hobbies|length) %}
         <h2 class="hobby-header"> I enjoy: </h2>
