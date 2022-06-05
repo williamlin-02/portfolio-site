@@ -66,13 +66,13 @@ def hobbies(name):
     profile_title = name.capitalize()
     hobbies = {
         "amber": ["Travelling, Photography, Wine, Baking"],
-        "jacky": ["hobbies"],
+        "jacky": ["Basketball, Gaming, Driving, Deep discussions"],
         "william": ["dance, volleyball, gaming, tv series"]
     }
     profile_hobby = hobbies[name]
     photos = {
         "amber": "amber_hobby.jpg",
-        "jacky": "pic",
+        "jacky": "jacky_hobby.jpg",
         "william": "william_hobby.jpg"
     }
     return render_template("hobbies.html", hobbies=profile_hobby, title=profile_title, photo=photos[name], url=os.getenv("URL"))
