@@ -2,7 +2,8 @@
 
 {% block body %}
     {% for i in range(hobbies|length) %}
-        <p>{{ hobbies[i] }}</p>
+        <h2 class="hobby-header"> I enjoy: </h2>
+        <p class="hobby-content">{{ hobbies[i] }}</p>
     {% endfor %}
 
 {% endblock %}
