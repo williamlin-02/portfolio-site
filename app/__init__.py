@@ -30,26 +30,26 @@ def william():
 def work_edu(name):
     profile_title = name.capitalize()
     job = {
-        "amber": ["job"],
+        "amber": ["Black Stallion Winery"],
         "jacky": ["Wendy's"],
         "william": ["job"]
     }
     # key: name
     # value: 2d list with inner generating new lines
     job_description = {
-        "amber": [["job"]],
+        "amber": [["July 2019 - June 2020"]],
         "jacky": [["October 2019 - March 2020"]],
         "william": [["job"]]
     }
     education = {
-        "amber": ["edu"],
+        "amber": ["University of Pennsylvania", "University of California, Davis"],
         "jacky": ["University of Kansas", "Northwest High School"],
         "william": ["edu"]
     }
     # key: name
     # value: 2d list with inner generating new lines
     edu_description = {
-        "amber": [["edu"]],
+        "amber": [["M.S Computer and Information Technology","Aug 2021 - May 2023"], ["Viticulture and Enology","Sep 2015 - Jun 2018"]],
         "jacky": [["B.S. Computer Science","Aug 2020 - May 2024"], ["High School", "Aug 2016 - May 2020"]],
         "william": [["edu"]]
     }
@@ -65,7 +65,7 @@ def work_edu(name):
 def hobbies(name):
     profile_title = name.capitalize()
     hobbies = {
-        "amber": ["hobbies"],
+        "amber": ["Travelling, Photography, Wine, Baking"],
         "jacky": ["hobbies"],
         "william": ["dance, volleyball, gaming, tv series"]
     }

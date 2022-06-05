@@ -156,3 +156,32 @@ li.dropdown-box {
     text-align:center;
     float:left;
 }
+
+/* the profile photo */
+.name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+.section-header {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hobby-header {
+    text-align: center;
+}
+
+.hobby-content {
+    text-align: center;
+}
