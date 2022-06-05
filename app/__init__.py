@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 
 load_dotenv()
-app = Flask(__name__)
+app = Flask(__name__, static_url_path = '/static')
 
 
 @app.route('/')
@@ -70,7 +70,12 @@ def hobbies(name):
         "william": ["dance, volleyball, gaming, tv series"]
     }
     profile_hobby = hobbies[name]
-    return render_template("hobbies.html", hobbies=profile_hobby, title=profile_title, url=os.getenv("URL"))
+    photos = {
+        "amber": "pic",
+        "jacky": "pic",
+        "william": "william_hobby.jpg"
+    }
+    return render_template("hobbies.html", hobbies=profile_hobby, title=profile_title, photo=photos[name], url=os.getenv("URL"))
 
 
 # for map page
