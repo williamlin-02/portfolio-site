@@ -5,25 +5,42 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
+'''
+    dynamic navigation bar
+    url: the url for the link, list
+    people: all the people pages, list
+    label: what to call the link, list
+'''
+class nav:
+    def __init__(self, url, people, label):
+        self.url = url
+        self.people = people
+        self.label = label
+
+profile_nav = nav(
+    ["", "work_edu", "hobbies"],
+    ["amber", "jacky", "william"],
+    ["About Me", "Work Experience/Education", "Hobbies"]
+)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+    return render_template('index.html', nav=profile_nav, title="MLH Fellow", url=os.getenv("URL"))
 
 # for amber page
 @app.route('/amber')
 def amber():
-    return render_template('amber.html', title="Amber", url=os.getenv("URL"))
+    return render_template('amber.html', nav=profile_nav, title="Amber", url=os.getenv("URL"))
 
 # for jacky page
 @app.route('/jacky')
 def jacky():
-    return render_template('jacky.html', title="Jacky", url=os.getenv("URL"))
+    return render_template('jacky.html', nav=profile_nav, title="Jacky", url=os.getenv("URL"))
 
 # for william page
 @app.route('/william')
 def william():
-    return render_template('william.html', title="William", url=os.getenv("URL"))
+    return render_template('william.html', nav=profile_nav, title="William", url=os.getenv("URL"))
 
 # for work experience/education page
 @app.route('/work_edu/<name>')
@@ -57,7 +74,7 @@ def work_edu(name):
     profile_edu_desc = edu_description[name]
     profile_job = job[name]
     profile_job_desc = job_description[name]
-    return render_template("work_edu.html", job=profile_job, job_description=profile_job_desc, education=profile_edu, 
+    return render_template("work_edu.html", nav=profile_nav, job=profile_job, job_description=profile_job_desc, education=profile_edu, 
             edu_description=profile_edu_desc, title=profile_title, url=os.getenv("URL"))
 
 # for work experience/education page
@@ -75,10 +92,10 @@ def hobbies(name):
         "jacky": "jacky_hobby.jpg",
         "william": "william_hobby.jpg"
     }
-    return render_template("hobbies.html", hobbies=profile_hobby, title=profile_title, photo=photos[name], url=os.getenv("URL"))
+    return render_template("hobbies.html", nav=profile_nav, hobbies=profile_hobby, title=profile_title, photo=photos[name], url=os.getenv("URL"))
 
 
 # for map page
 @app.route('/map')
 def map():
-    return render_template('map.html', title="Map", url=os.getenv("URL"))
+    return render_template('map.html', nav=profile_nav, title="Map", url=os.getenv("URL"))
