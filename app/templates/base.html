@@ -16,6 +16,10 @@
 
     <link lang='sass' rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}">
     <link rel='icon' href="{{ url_for('static',filename='img/favicon.ico') }}" type='image/x-icon' />
+    
+    <script type="text/jsx" src="../../react-frontend/src/index.js">
+    </script>
+
     <title>{{ title }}</title>
 </head>
 
@@ -48,6 +52,7 @@
             
         </div>
     </header>
+
     {% block body %}{% endblock %}
 </body>
 </html>
