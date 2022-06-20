@@ -1,8 +1,9 @@
 p, h1, h2, h3, h4, h5, h6, button {
-    font-family: "Roboto", serif;
+    font-family: "Open Sans", serif;
 }
 
 body {
+    padding-top: 100px;
     background-color: #e4efff;
     background-size: cover;
     width: auto; 
@@ -11,45 +12,31 @@ body {
     margin: 0px;
 }
 
-.nav-bar {
+#main-nav {
     width: 100%;
     display: inline-block;
-    background-color: #80b1f7;
+
+    .bg-light{
+        background-color: #80b1f7;
+    }
+
     font-family: "Roboto", serif;
     font-weight: 700 !important;
-    padding-top: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.nav-content .logo-touch-target {
-    display: inline-flex;
-    height: 60%;
-    width: 350px;
-}
-
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
-}
-
-.nav-logo {
+.rounded-circle{
+    border:1px solid;
+    border-radius:50%;
+    width:150px;
+    height:auto;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.nav-logo img {
-    width: 200px;
-}
-
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
-}
-
 .profile {
+    padding-top: 25px;
     background-color: #1d539f !important;
     text-align: center;
     height: 320px;
@@ -57,7 +44,7 @@ body {
 }
 
 .profile h1 {
-        font-size: 50px;
+        font-size: 25px;
         font-weight: 700;
         color: white;
 }
@@ -103,15 +90,6 @@ body {
     width: 1000px;
 }
 
-.nav-menu {
-    list-style-type: none;
-    height: 45px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 li {
     float: left;
@@ -125,48 +103,19 @@ li a {
     text-decoration: none;
 }
 
-.dropdown-content a {
-    color: black;
-}
 
 li a:hover, .dropdown-box:hover .dropdown{
     background-color: #1d539f;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-}
-
-li.dropdown-box {
-    display: block;
-}
-
-.dropdown-box:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #80b1f7;
-}
-
-#work-edu-site {
-    text-align: center;
-}
-
-.work-edu-container {
-    width: 30%;
-    display: inline-block;
-    vertical-align: top;
-}
 
 /* the profile photo */
 .name {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     width: 15%;
+    justify-content:center;"
 }
 
 .section-header {
@@ -182,10 +131,21 @@ li.dropdown-box {
     margin-right: auto;
 }
 
-.hobby-header {
+.col {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.hobby-content {
-    text-align: center;
+#aboutme {
+    background: #8ACFFF;
+}
+
+#work-edu{
+    padding-top: 100px;
+    padding-bottom: 100px
+}
+
+#hobbies {
+    background: #8ACFFF;
 }

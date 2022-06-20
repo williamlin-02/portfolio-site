@@ -16,42 +16,40 @@
 
     <link lang='sass' rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}">
     <link rel='icon' href="{{ url_for('static',filename='img/favicon.ico') }}" type='image/x-icon' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     
-    <script type="text/jsx" src="../../react-frontend/src/index.js">
-    </script>
+    
 
     <title>{{ title }}</title>
 </head>
 
 <body>
-    <header class="nav-bar">
-        <div class="nav-content">
-            
-            <div class="nav-logo">
-                <a href={{ url_for( "index" ) }}><img src="{{ url_for( 'static',filename='img/logo.svg') }}"/></a>
-            </div>
-            
-            <ul class="nav-menu">
-                {% for i in range(nav.people|length) -%}
-                    <li class="dropdown-box">
-                        <a class="dropdown" href="#">{{nav.people[i]|upper}}</a>
-                        <div class="dropdown-content">
-                            {% for j in range(nav.url|length) -%}
-                                {% if j == 0 %}
-                                    <a href={{ url_for( nav.people[i] ) }}>{{nav.label[j]}}</a>
-                                {% else %}
-                                    <a href={{ url_for( nav.url[j], name=nav.people[i] ) }}>{{nav.label[j]}}</a>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <script src="./static/javascript/navbar.js"></script>
+    
+    <!--Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-uppercase fixed-top" id="main-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href={{ url_for("index") }}>My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
                     </li>
-                    <br>
-                {% endfor %}
-                <li><a href={{ url_for( "map" ) }}>MAP</a></li>
-            </ul>
-            
+                    <li class="nav-item">
+                        <a class="nav-link" href={{ url_for("william") }}>About Me</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href={{ url_for( "map" ) }}>Map</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+        </nav>
 
     {% block body %}{% endblock %}
 </body>

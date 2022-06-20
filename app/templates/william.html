@@ -1,22 +1,61 @@
 {% extends "base.html" %}
 
 {% block body %}
-<div class="name">
-    <div>
+
+<div class="container-fluid" id="aboutme">
+    <div class="name">
         <img src="./static/img/william_photo.jpg" width="200">
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="section-header">William Lin</h1>
+            <p class ="text" style="width: 500px;" >
+                I'm currently pursuing a B.S. in Computer Science 
+                at the University of Chicago. My favorite aspect
+                of programming is being able to visualize my efforts on
+                screen in various creative ways—I especially loved
+                creating a replica of bloons tower defense during one of
+                my first computer science classes in high school.
+                Such experiences are what draws me to coding and the 
+                vast ocean of possibilities it allows for.
+            </p>
+        </div>
     </div>
 </div>
 
-<div class="about-me">
-    <h1 class="section-header">William Lin</h1>
-    <p class ="text" style="width: 500px;" >
-        I'm currently pursuing a B.S. in Computer Science 
-        at the University of Chicago. My favorite aspect
-        of programming is being able to visualize my efforts on
-        screen in various creative ways—I especially loved
-        creating a replica of bloons tower defense during one of
-        my first computer science classes in high school.
-        Such experiences are what draws me to coding and the 
-        vast ocean of possibilities it allows for.</p>
+<div class="container-fluid" id="work-edu">
+    <div class="row">
+      <div class="col">
+        <p> Education: <br>
+            University of Chicago, Sept 2020 - Jun 2024 <br>
+            B.S in Computer Science <br>
+            Minor in Philosophy <br><br>
+
+            Stuyvesant High School, Sept 2016 - Jun 2020 <br>
+        </p>
+      </div>
+      <div class="col">
+        <p> Work Experience: <br>
+            U.S. Census Bureau, Aug 2020 - Nov 2020
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="container-fluid" id="hobbies">
+    <div class="name">
+        <div class="hobbies">
+            <img src="/static/img/william_hobby.jpg" width="500" alt = "picture of hobby">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        <p> Hobbies: <br>
+            dance, volleyball, gaming, tv series
+        </p>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
