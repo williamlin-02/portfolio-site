@@ -2,14 +2,14 @@
 
 {% block body %}
 
-<div class="container-fluid" id="aboutme">
+<div class="container-fluid position-relative" id="aboutme">
     <div class="name">
         <img src="./static/img/william_photo.jpg" width="200">
     </div>
     <div class="row">
         <div class="col">
-            <h1 class="section-header">William Lin</h1>
-            <p class ="text" style="width: 500px;" >
+            <h1 class="section-header text-white">William Lin</h1>
+            <p class ="text text-white" style="width: 500px;" >
                 I'm currently pursuing a B.S. in Computer Science 
                 at the University of Chicago. My favorite aspect
                 of programming is being able to visualize my efforts on
@@ -26,12 +26,15 @@
 <div class="container-fluid" id="work-edu">
     <div class="row">
       <div class="col">
-        <p> Education: <br>
+        <div class="name">
+            <img src="./static/img/uchicago_campus.jpeg" width="500">
+        </div>
+        <p> Education: <br><br>
             University of Chicago, Sept 2020 - Jun 2024 <br>
             B.S in Computer Science <br>
             Minor in Philosophy <br><br>
 
-            Stuyvesant High School, Sept 2016 - Jun 2020 <br>
+            Stuyvesant High School, Sept 2016 - Jun 2020
         </p>
       </div>
       <div class="col">
@@ -46,12 +49,21 @@
 <div class="container-fluid" id="hobbies">
     <div class="name">
         <div class="hobbies">
-            <img src="/static/img/william_hobby.jpg" width="500" alt = "picture of hobby">
+            <iframe width="640" height="360"
+                src="https://www.youtube.com/embed/Aq6cipkKq6A&ab_channel=stonybrookPUSO"
+                frameborder="0" allowfullscreen>   
+            </iframe>
+            <!-- <video width="700" controls>
+                <source src="/static/videos/choreo_project(ft.chae).MOV" type="video/MOV">
+            </video> -->
         </div>
+        <!-- <div class="hobbies">
+            <img src="/static/img/william_hobby.jpg" width="500" alt = "picture of hobby">
+        </div> -->
     </div>
     <div class="row">
         <div class="col">
-        <p> Hobbies: <br>
+        <p class ="text text-white"> Hobbies: <br>
             dance, volleyball, gaming, tv series
         </p>
         </div>
