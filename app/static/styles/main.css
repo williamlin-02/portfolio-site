@@ -166,3 +166,17 @@ li a:hover, .dropdown-box:hover .dropdown{
     background-color: #2c3e50;
     color: #fff;
 }
+
+.card {
+    margin: auto;
+    margin-top: 40px;
+}
+
+.project-header{
+    padding-top: 35px;
+}
+
+#projects {
+    background: #EA4747;
+    padding-bottom: 60px;
+}

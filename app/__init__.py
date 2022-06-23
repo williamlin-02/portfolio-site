@@ -21,7 +21,16 @@ def index():
 def william():
     return render_template('william.html', title="William", url=os.getenv("URL"))
 
+# for projects page
+@app.route('/projects')
+def projects():
+    return render_template('projects.html', title="Projects", url=os.getenv("URL"))
+
 # for map page
 @app.route('/map')
 def map():
     return render_template('map.html', title="Map", url=os.getenv("URL"))
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
