@@ -21,7 +21,7 @@ class TimelinePost(Model):
     email = CharField()
     content = TextField()
     created_at = DateTimeField(default=datetime.datetime.now)
-
+    
     class Meta:
         database = mydb
 
@@ -72,11 +72,14 @@ def get_time_line_post():
     }
 
 # not working yet
-@app.route('/api/timeline_post', methods=['DELETE'])
-def delete_time_line_post():
-    model_to_dict(p)
-    for p in TimelinePost.select().delete()
+# @app.route('/api/timeline_post', methods=['DELETE'])
+# def delete_time_line_post():
+#     model_to_dict(p)
+#     for p in TimelinePost.select().delete_by_id(p.id)
 
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title="Timeline")
 
 if __name__ == "__main__":
     app.run(debug=True)
