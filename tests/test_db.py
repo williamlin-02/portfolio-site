@@ -40,5 +40,5 @@ class TestTimelinePost(unittest.TestCase):
         assert second_post.id == 2
 
         # TODO: GET timeline posts and assert that they are correct
-        for i, post in enumerate(TimelinePost.select()):
+        for i, post in enumerate(TimelinePost.select(), 1):
             assert post.id == i

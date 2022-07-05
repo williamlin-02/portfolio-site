@@ -60,9 +60,24 @@ def map():
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
-    name = request.form['name']
-    email = request.form['email']
-    content = request.form['content']
+    get_name = request.form.get('name')
+    get_email = request.form.get('email')
+    get_content = request.form.get('content')
+
+    if get_name is None or get_name == "":
+        return "Invalid name", 400
+    else:
+        name = request.form['name']
+    
+    if "@" not in get_email or get_email is None:
+        return "Invalid email", 400
+    else:
+        email = request.form['email']
+
+    if get_content is None or get_content == "":
+        return "Invalid content", 400
+    else: 
+        content = request.form['content']
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
     return model_to_dict(timeline_post)
 
