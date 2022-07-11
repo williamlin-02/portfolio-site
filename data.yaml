@@ -1,0 +1,13 @@
+employed: true
+foods:
+- Apple
+- Orange
+- Strawberry
+- Mango
+job: Developer
+languages:
+  pascal: Lame
+  perl: Elite
+  python: Elite
+name: Martin Developer
+skill: Elite
