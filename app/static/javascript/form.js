@@ -15,8 +15,7 @@ form.addEventListener('submit', function(e){
     .then(res => res.json())
     .then(data => console.log(data))
     .catch(err => console.log(err))
+    .then(form.reset())
+    .then(window.location.reload())
 
-    form.reset();
-
-    window.location.reload();
 })
