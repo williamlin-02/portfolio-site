@@ -16,11 +16,12 @@
 <script src="./static/javascript/form.js"></script>
 
 <div>
+    <h4> TIMELINE POSTS </h4>
     {% for post in posts %}
-        <div>
-            Name: {{post[name]}} <br>
-            Email: {{post[email]}} <br>
-            Content: {{post[content]}} <br>
+        <div id="posts">
+            Name: {{post['name']}} <br>
+            Email: {{post['email']}} <br>
+            Content: {{post['content']}} <br>
         </div>
     {% endfor %}
 </div>

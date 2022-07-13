@@ -180,3 +180,8 @@ li a:hover, .dropdown-box:hover .dropdown{
     background: #EA4747;
     padding-bottom: 60px;
 }
+
+#posts{
+    padding: 10px;
+    border: 1px solid black;
+}
