@@ -17,4 +17,6 @@ form.addEventListener('submit', function(e){
     .catch(err => console.log(err))
 
     form.reset();
+
+    window.location.reload();
 })
