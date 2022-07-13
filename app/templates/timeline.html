@@ -15,4 +15,14 @@
 
 <script src="./static/javascript/form.js"></script>
 
+<div>
+    {% for post in posts %}
+        <div>
+            Name: {{post[name]}} <br>
+            Email: {{post[email]}} <br>
+            Content: {{post[content]}} <br>
+        </div>
+    {% endfor %}
+</div>
+
 {% endblock %}
